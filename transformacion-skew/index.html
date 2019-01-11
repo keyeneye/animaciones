@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transformacion rotacion</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            justify-content: center;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        .container{
+            border: 1px solid red;
+            display: flex;
+            transform-style: preserve-3d;
+        }
+        .container:hover .cuadrado.a{
+            transform: skew(45deg);
+        }
+        .container:hover .cuadrado.b{
+            transform: skew(15deg, 15deg);
+        }
+        .container:hover .cuadrado.c{
+            transform: scale(2, .5);
+        }
+        .container:hover .cuadrado.d{
+            transform: translate3d(100px, 100px, 100px);
+        }
+        .container:hover .cuadrado.e{
+            transform: rotateX(45deg) rotateY(45deg) rotateZ(45deg);
+        }
+        .container:hover .cuadrado.f{
+            transform: rotate3d(1, 1, 1, 45deg);
+        }
+        .cuadrado{
+            margin: 30px;
+        }
+        .cuadrado.a{
+            background-color: #7dc900;
+            width: 100px;
+            height: 100px;
+            /* margin: 20px; */
+            transition: .3s;
+        }
+        .cuadrado.b{
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+            /* margin: 20px; */
+            transition: .3s;
+        }
+        .cuadrado.c{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            /* margin: 20px; */
+            transition: .3s;
+        }
+        .cuadrado.d{
+            background-color: gray;
+            width: 100px;
+            height: 100px;
+            /* margin: 20px; */
+            transition: .3s;
+        }
+        .cuadrado.e{
+            background-color: pink;
+            width: 100px;
+            height: 100px;
+            /* margin: 20px; */
+            transition: .3s;
+        }
+        .cuadrado.f{
+            background-color: indigo;
+            width: 100px;
+            height: 100px;
+            /* margin: 20px; */
+            transition: .3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cuadrado a">
+            Hola mundo!
+        </div>
+        <div class="cuadrado b">
+            Holi ño
+        </div>
+        <div class="cuadrado c">
+            Holi ño
+        </div>
+        <div class="cuadrado d">
+            Holi ño
+        </div>
+        <div class="cuadrado e">
+            Holi ño
+        </div>
+        <div class="cuadrado f">
+            Holi ño
+        </div>
+    </div>
+</body>
+</html>
