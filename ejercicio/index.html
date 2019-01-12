@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            body{
+                background-color: #001a4d;
+                display: flex;
+                height: 100vh;
+                align-items: center;
+                justify-content: center;
+            }
+            .container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color:  #194d19;
+                width: 100vw;
+                height: 200px;
+                transition: 5s; 
+            }
+            .mensaje{
+                display: flex;
+            }
+            .mensaje a{
+                text-decoration: none;
+                color: white;
+                font-size: 14px;
+                margin-right: 40px;
+            }
+            .leonidas{
+                transition: 2s linear;
+            }
+            .random{
+                transition: 2s linear;
+            }
+            .mensaje:hover .leonidas{
+                background-color: #001a4d;
+                opacity: .5;
+                font-size: 24px;
+                text-transform: uppercase;
+                border: 2px solid white;
+                border-radius: 10%;
+            }
+            .mensaje:hover .random{
+                background-color: #001a4d;
+                opacity: .5;
+                text-transform: capitalize;
+                font-size: 24px;
+                border: 2px solid white;
+                border-radius: 10%;
+            }
+            .container:hover{
+                transform: rotateX(360deg);
+                background-color: #BB4025;
+                color: #001a4d;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="mensaje">
+                <a href="https://www.youtube.com/user/LeonidasEsteban" target="_blank" class="leonidas">Canal de Youtube de Leonidas Esteban</a>
+                <a href="https://www.youtube.com/watch?v=cK9Z9Zcuso0" target="_blank" class="random">Un vídeo random</a>
+            </div>
+        </div> 
+    </body>
+</html>
