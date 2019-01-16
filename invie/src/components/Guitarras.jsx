@@ -27,7 +27,9 @@ class Guitarras extends Component{
                         return(
                             <article className="guitarra" key={index}> 
                                 <CSSTransitionGroup
-                                transitionName = ""
+                                transitionName = "flicker"
+                                transitionEnterTimeOut={500}
+                                transitionLeaveTimeOut={500}
                                 >
                                     <img className="guitarra-image" 
                                     key={guitarra.image}
@@ -36,16 +38,22 @@ class Guitarras extends Component{
                                     width="350"
                                     />
                                 </CSSTransitionGroup>
-                                <div className="contenedor-guitarra">
-                                    <h3 className="guitarra-name">{guitarra.name}</h3>
-                                    <ol>
-                                        {guitarra.features.map((feature, index) => {
-                                            return(
-                                                <li key={index}>{feature}</li>
-                                            )
-                                        })}
-                                    </ol>
-                                </div>
+                                <CSSTransitionGroup
+                                transitionName = "fade"
+                                transitionEnterTimeOut={300}
+                                transitionLeave={false}
+                                >
+                                    <div className="contenedor-guitarra" key={guitarra.name}>
+                                        <h3 className="guitarra-name">{guitarra.name}</h3>
+                                        <ol>
+                                            {guitarra.features.map((feature, index) => {
+                                                return(
+                                                    <li key={index}>{feature}</li>
+                                                )
+                                            })}
+                                        </ol>
+                                    </div>
+                                </CSSTransitionGroup>
                             </article>                           
                         )
                     })

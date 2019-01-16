@@ -8,14 +8,18 @@ import * as serviceWorker from './serviceWorker';
 
 import cheet from 'cheet.js'
 import logoPortada from './images/invie.png'
+import logoPlatzi from './images/platzi.png'
 import acustica from './images/invie-acustica.png';
 import classic from './images/invie-classic.png';
+import easterA from './images/easter-a.png';
+import easterB from './images/easter-b.png';
 
 import { Provider } from 'react-redux';
 import {createStore} from 'redux';
 
 
   const initialState = {
+    isAnimated: false,
     menu: [
         {
             href: 'index.html',
@@ -31,7 +35,6 @@ import {createStore} from 'redux';
         },
       ],
       logoPortada: logoPortada,
-    
       guitarras: [
         {
             image: acustica,
@@ -53,7 +56,8 @@ import {createStore} from 'redux';
               'Empieza tu camino como rockstar',
           ]
       }
-    ]
+      ]
+      
   }
 
   function reducer(state, action) {
@@ -70,12 +74,35 @@ import {createStore} from 'redux';
   const store = createStore(reducer, initialState);
 
   const easter = {
+    isAnimated: 'is-animated',
     menu: [
-        {
-            href: 'index.html',
-            title: 'Home',
-        },
+   
       ],
+      logoPortada: logoPlatzi,
+      guitarras: [
+        {
+            image: easterA,
+            alt: 'Guitarra Invie Acustica',
+            name: 'Invie Familiar',
+            features: [
+                'Lista para copiar a los Simpsons',
+                'Aire puro',
+                'Chistes malos',
+            ]
+        },
+        {
+          image: easterB,
+          alt: 'Guitarra Invie Classic',
+          name: 'Invie Classic',
+          features: [
+              'Estilo vintage',
+              'Liviana',
+              'Empieza tu camino como rockstar',
+          ]
+      }
+    ]
+
+
   }
 
   cheet('i n v i e', () => {
