@@ -1,5 +1,5 @@
 {
-  "name": "hello-world",
+  "name": "invie",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
@@ -7,7 +7,6 @@
   },
   "dependencies": {
     "react": "^16.7.0",
-    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.7.0"
   },
   "scripts": {
