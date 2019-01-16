@@ -193,13 +193,16 @@
     background-image: url('../images/corazon.png');
     /* background-size: x y  */
     background-size: 1450px 50px;
+    bottom: -100px;
+    position: fixed;
 }
-.like.is-liked{
-    animation-name: like;
-    animation-duration: .8s;
-    animation-timing-function: steps(28);
+.like.is-liked{  
+    animation-name: like, move;
+    animation-duration: .8s, 5s;
+    animation-timing-function: steps(28), linear;
     /* background-position: right; */
     animation-fill-mode: forwards;
+    animation-iteration-count: infinite, 1;
 }
 @keyframes like{
     0%{
@@ -209,5 +212,15 @@
         /* transfofrm: translateX(200px); */
         /* background-position: -2800px 0; */
         background-position: right;
+    }
+}
+@keyframes move{
+    0%{
+        position: absolute;
+        bottom: 0;
+    }
+    100%{
+        position: absolute;
+        bottom: 110%;
     }
 }
