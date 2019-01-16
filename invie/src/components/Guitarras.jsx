@@ -1,4 +1,12 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
+import { CSSTransitionGroup } from 'react-transition-group';
+
+function mapStateToProps(state){
+    return{
+        guitarras: state.guitarras,
+    }
+}
 
 
 class Guitarras extends Component{
@@ -18,7 +26,16 @@ class Guitarras extends Component{
                    this.props.guitarras.map((guitarra, index)=>{
                         return(
                             <article className="guitarra" key={index}> 
-                                <img className="guitarra-image" src={guitarra.image}  alt={guitarra.alt}  width="350"/>
+                                <CSSTransitionGroup
+                                transitionName = ""
+                                >
+                                    <img className="guitarra-image" 
+                                    key={guitarra.image}
+                                    src={guitarra.image}  
+                                    alt={guitarra.alt}  
+                                    width="350"
+                                    />
+                                </CSSTransitionGroup>
                                 <div className="contenedor-guitarra">
                                     <h3 className="guitarra-name">{guitarra.name}</h3>
                                     <ol>
@@ -37,4 +54,4 @@ class Guitarras extends Component{
         )
     }
 }
-export default Guitarras;
+export default connect(mapStateToProps)(Guitarras);
